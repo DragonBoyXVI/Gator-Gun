@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bfnhjulblk67y"]
+
+[sub_resource type="GDScript" id="GDScript_ua5yu"]
+script/source = "@tool
+extends SoldierCharacter;
+
+
+@export var _movement: VelocityFloating2D;
+
+
+func _physics_process( _delta: float ) -> void:
+	
+	pass;
+"
+
+[node name="TestPlayer" type="CharacterBody2D" unique_id=388744757]
+collision_layer = 0
+collision_mask = 0
+motion_mode = 1
+script = SubResource("GDScript_ua5yu")
+metadata/_custom_type_script = "uid://bxf15x3xsh2vk"
