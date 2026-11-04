@@ -1,0 +1,6 @@
+[submodule "XVI-Godot-Assets"]
+	path = XVI-Godot-Assets
+	url = https://github.com/DragonBoyXVI/XVI-Godot-Assets.git
+[submodule "DragonXVI-Godot"]
+	path = DragonXVI-Godot
+	url = https://github.com/DragonBoyXVI/DragonXVI-Godot.git
