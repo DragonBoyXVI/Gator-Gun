@@ -1,6 +1,6 @@
 
 
-Player that moves in a top down
+# Player that moves in a top down view
 Rotates to face the mouse (or stick)
 
 Gun holder component?

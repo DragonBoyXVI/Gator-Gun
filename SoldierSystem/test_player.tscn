@@ -1,21 +1,53 @@
 [gd_scene format=3 uid="uid://bfnhjulblk67y"]
 
+[ext_resource type="Texture2D" uid="uid://d3d886ls60isl" path="res://icon.svg" id="1_e81u5"]
+[ext_resource type="Script" uid="uid://cu1sqqe0gpyvd" path="res://SoldierSystem/velocity_floating_2d.gd" id="2_d51t8"]
+[ext_resource type="Script" uid="uid://c8u0cdagfafwm" path="res://SoldierSystem/rotation_control.gd" id="3_d51t8"]
+
 [sub_resource type="GDScript" id="GDScript_ua5yu"]
 script/source = "@tool
 extends SoldierCharacter;
 
 
 @export var _movement: VelocityFloating2D;
+@export var _rotation: RotationControl;
+
+@onready var _model: Node2D = $Sprite2D;
 
 
-func _physics_process( _delta: float ) -> void:
+func _physics_process( delta: float ) -> void:
+	
+	var move_vector: Vector2 = InputNames.Move.get_vector();
+	_movement.accelerate_in_direction( delta, move_vector );
+	_movement.move_character_body( self );
+	
+	var mouse_direction: float = global_position.angle_to_point( get_global_mouse_position() );
+	_rotation.rotate_to_direction( delta, mouse_direction );
+	_model.rotation = _rotation.get_current_rotation();
 	
 	pass;
 "
 
-[node name="TestPlayer" type="CharacterBody2D" unique_id=388744757]
-collision_layer = 0
-collision_mask = 0
-motion_mode = 1
+[sub_resource type="CircleShape2D" id="CircleShape2D_ua5yu"]
+radius = 48.0
+
+[node name="TestPlayer" type="CharacterBody2D" unique_id=388744757 node_paths=PackedStringArray("_movement", "_rotation")]
 script = SubResource("GDScript_ua5yu")
+_movement = NodePath("VelocityFloating2D")
+_rotation = NodePath("RotationControl")
 metadata/_custom_type_script = "uid://bxf15x3xsh2vk"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1732917268]
+texture = ExtResource("1_e81u5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1765853283]
+shape = SubResource("CircleShape2D_ua5yu")
+
+[node name="VelocityFloating2D" type="Node" parent="." unique_id=36280886]
+script = ExtResource("2_d51t8")
+metadata/_custom_type_script = "uid://cu1sqqe0gpyvd"
+
+[node name="RotationControl" type="Node" parent="." unique_id=806005394]
+script = ExtResource("3_d51t8")
+rotation_speed = 12.566370614359172
+metadata/_custom_type_script = "uid://c8u0cdagfafwm"

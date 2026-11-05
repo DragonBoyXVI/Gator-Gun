@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jtkbkem1fk6s"]
+
+[ext_resource type="PackedScene" uid="uid://bfnhjulblk67y" path="res://SoldierSystem/test_player.tscn" id="1_gy3sr"]
+[ext_resource type="Texture2D" uid="uid://b5ribwh1tf45n" path="res://XVI-Godot-Assets/Images/Characters/brick.png" id="2_1lwx6"]
+
+[node name="TestWorld" type="Node2D" unique_id=1290595803]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=394847593]
+scale = Vector2(5.7399106, 3.3488374)
+texture = ExtResource("2_1lwx6")
+centered = false
+
+[node name="TestPlayer" parent="." unique_id=388744757 instance=ExtResource("1_gy3sr")]
+
+[node name="Camera2D" type="Camera2D" parent="TestPlayer" unique_id=1417302610]
