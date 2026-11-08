@@ -23,10 +23,10 @@ class_name InputNames;
 @abstract class Look:
 	extends Object;
 	
-	const RIGHT := &"Move Right";
-	const DOWN := &"Move Down";
-	const LEFT := &"Move Left";
-	const UP := &"Move Up";
+	const RIGHT := &"Look Right";
+	const DOWN := &"Look Down";
+	const LEFT := &"Look Left";
+	const UP := &"Look Up";
 	
 	static func get_vector() -> Vector2:
 		return Input.get_vector( LEFT, RIGHT, UP, DOWN );

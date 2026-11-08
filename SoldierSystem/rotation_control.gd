@@ -21,7 +21,7 @@ func set_rotation( new_rotation: float ) -> void:
 
 
 ## Returns the [@GlobalScope.angle_difference] of tge current direction and the provided direction.
-func rotation_diffrence( direction: float ) -> float:
+func get_rotation_diffrence( direction: float ) -> float:
 	return angle_difference( _current_rotation, direction );
 
 

@@ -1,4 +1,5 @@
 @tool
+@abstract
 extends Node2D;
 class_name Brain;
 ## Extends [Node2D] for mouse controls.
@@ -6,9 +7,18 @@ class_name Brain;
 ##
 ## Ditto
 
+var mouse_mode: bool = false;
+
 
 var move_vector: Vector2 = Vector2.ZERO;
 var look_vector: Vector2 = Vector2.ZERO;
+
+var shoulder_left: bool = false;
+var shoulder_right: bool = false;
+
+var accept: bool = false;
+var back: bool = false;
+var special: bool = false;
 
 
 func _ready() -> void:
