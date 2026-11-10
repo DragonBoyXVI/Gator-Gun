@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://bm1lwhfxgiwoh"]
 
+[ext_resource type="Script" uid="uid://gvp5qxyvjbnf" path="res://DragonXVI-Godot/RoomManagment/room_manager.gd" id="1_h0d1l"]
+[ext_resource type="PackedScene" uid="uid://djwn6plspgr8y" path="res://Rooms/Main Menu/main_menu.tscn" id="2_ujucf"]
+[ext_resource type="Script" uid="uid://d3kesyqgaanbp" path="res://XVI-Godot-Assets/Scripts/fps_label.gd" id="3_p2je4"]
+
 [node name="GameWorld" type="Node2D" unique_id=74066610]
+
+[node name="RoomManager2D" type="Node2D" parent="." unique_id=1856671898]
+script = ExtResource("1_h0d1l")
+metadata/_custom_type_script = "uid://gvp5qxyvjbnf"
+
+[node name="MainMenu" parent="RoomManager2D" unique_id=647852551 instance=ExtResource("2_ujucf")]
+
+[node name="FpsLabel" type="Label" parent="." unique_id=1892054013]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("3_p2je4")
+metadata/_custom_type_script = "uid://d3kesyqgaanbp"

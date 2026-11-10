@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://djwn6plspgr8y"]
+
+[ext_resource type="Theme" uid="uid://cnughvo6m8l6u" path="res://main_theme.tres" id="1_tgf81"]
+[ext_resource type="Texture2D" uid="uid://ip32hjke7db6" path="res://XVI-Godot-Assets/Images/Script Icons/icons.png" id="1_xa27r"]
+[ext_resource type="Script" uid="uid://dvjbxnc5fxgub" path="res://DragonXVI-Godot/MiscComps/focus_sort_box_container.gd" id="2_tgf81"]
+[ext_resource type="Script" uid="uid://cfwviaehv2rcp" path="res://MenuComps/gator_button.gd" id="4_u6fea"]
+
+[node name="MainMenu" type="Node2D" unique_id=647852551]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1626776529]
+
+[node name="Main" type="Control" parent="CanvasLayer" unique_id=583460114]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tgf81")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Main" unique_id=2093351637]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Main/MarginContainer" unique_id=872923372]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Main/MarginContainer/VBoxContainer" unique_id=1823052445]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_xa27r")
+stretch_mode = 5
+
+[node name="FocusSortBoxContainer" type="BoxContainer" parent="CanvasLayer/Main/MarginContainer/VBoxContainer" unique_id=2049219800]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+vertical = true
+script = ExtResource("2_tgf81")
+metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/Main/MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=893132569]
+layout_mode = 2
+text = "KEY_PLAY"
+script = ExtResource("4_u6fea")
+metadata/_custom_type_script = "uid://cfwviaehv2rcp"
+
+[node name="SettingsButton" type="Button" parent="CanvasLayer/Main/MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=1312644118]
+layout_mode = 2
+text = "KEY_SETTINGS"
+script = ExtResource("4_u6fea")
+metadata/_custom_type_script = "uid://cfwviaehv2rcp"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Main/MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=1088954693]
+layout_mode = 2
+text = "KEY_QUIT_DESKTOP"
+script = ExtResource("4_u6fea")
+metadata/_custom_type_script = "uid://cfwviaehv2rcp"

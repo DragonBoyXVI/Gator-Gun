@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://jtkbkem1fk6s"]
 
+[ext_resource type="Script" uid="uid://dec65h6ee82p8" path="res://DragonXVI-Godot/RoomManagment/obj_room.gd" id="1_1lwx6"]
 [ext_resource type="PackedScene" uid="uid://bfnhjulblk67y" path="res://SoldierSystem/test_player.tscn" id="1_gy3sr"]
 [ext_resource type="Texture2D" uid="uid://b5ribwh1tf45n" path="res://XVI-Godot-Assets/Images/Characters/brick.png" id="2_1lwx6"]
 
 [node name="TestWorld" type="Node2D" unique_id=1290595803]
+script = ExtResource("1_1lwx6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=394847593]
 scale = Vector2(5.7399106, 3.3488374)

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Gator Gun"
-run/main_scene="uid://jtkbkem1fk6s"
+run/main_scene="uid://bm1lwhfxgiwoh"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.svg"
 
