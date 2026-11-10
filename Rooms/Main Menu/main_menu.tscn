@@ -45,18 +45,21 @@ metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
 
 [node name="PlayButton" type="Button" parent="CanvasLayer/Main/MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=893132569]
 layout_mode = 2
+offset_transform_enabled = true
 text = "KEY_PLAY"
 script = ExtResource("4_u6fea")
 metadata/_custom_type_script = "uid://cfwviaehv2rcp"
 
 [node name="SettingsButton" type="Button" parent="CanvasLayer/Main/MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=1312644118]
 layout_mode = 2
+offset_transform_enabled = true
 text = "KEY_SETTINGS"
 script = ExtResource("4_u6fea")
 metadata/_custom_type_script = "uid://cfwviaehv2rcp"
 
 [node name="QuitButton" type="Button" parent="CanvasLayer/Main/MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=1088954693]
 layout_mode = 2
+offset_transform_enabled = true
 text = "KEY_QUIT_DESKTOP"
 script = ExtResource("4_u6fea")
 metadata/_custom_type_script = "uid://cfwviaehv2rcp"
