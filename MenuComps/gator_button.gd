@@ -6,7 +6,7 @@ class_name GatorButton;
 # focus anim: scale up slightly, tile to side mouse is on
 # if in gamepad mode, tile toward center of screen
 # XIf mouse comes from the top, tilt toward it
-# otherwise, tilt away from it
+# Xotherwise, tilt away from it
 
 # Xpress anim: scale down when pressed
 
@@ -68,7 +68,8 @@ func _on_focus_entered() -> void:
 	var bounce_to_right: bool = _is_bounce_on_right_side();
 	var rotate_amount: float = FOCUS_ROT_AMOUNT if bounce_to_right else -FOCUS_ROT_AMOUNT;
 	var tweener: PropertyTweener = _rotation_tween.tween_property( self, ^"offset_transform_rotation", rotate_amount, FOCUS_ANIM_TIME );
-	tweener.set_ease( Tween.EASE_IN );
+	#tweener.set_ease( Tween.EASE_IN_OUT );
+	#tweener.set_trans( Tween.TRANS_LINEAR );
 	tweener = _rotation_tween.tween_property( self, ^"offset_transform_rotation", 0.0, FOCUS_ANIM_TIME );
 	tweener.set_ease( Tween.EASE_OUT );
 	tweener.set_trans( Tween.TRANS_ELASTIC );
