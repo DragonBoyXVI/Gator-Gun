@@ -1,6 +1,7 @@
 
 ## Pregame
 - Load profile?
+profiles would make having seperate games and save files easier
 - Click Play
 - Choose gamemode (story, endless, sandbox, etc)
 - Choose map
