@@ -11,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 0.13472222
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
 focus_mode = 2
 script = ExtResource("1_ekgxq")
 _name_label = NodePath("MarginContainer/FocusSortBoxContainer/NameLabel")
@@ -34,12 +35,12 @@ text = "Drac Pelt"
 
 [node name="LastPlayedLabel" type="Label" parent="MarginContainer/FocusSortBoxContainer" unique_id=1948728977]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 2
 text = "2005-02-16"
 
 [node name="CompletionLabel" type="Label" parent="MarginContainer/FocusSortBoxContainer" unique_id=2134060599]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 2
 text = "5.0%"
 
 [node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/FocusSortBoxContainer" unique_id=1930202597]

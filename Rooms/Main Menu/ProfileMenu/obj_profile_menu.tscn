@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1juhvfve46li"]
 
 [ext_resource type="Theme" uid="uid://cnughvo6m8l6u" path="res://main_theme.tres" id="1_smvge"]
+[ext_resource type="Script" uid="uid://bhvhwtbpjxu75" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_menu.gd" id="2_0m2yt"]
 [ext_resource type="PackedScene" uid="uid://up5v0cvghngy" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_viewer.tscn" id="2_smvge"]
 [ext_resource type="PackedScene" uid="uid://bsg863dtmu8pn" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_maker.tscn" id="3_477cx"]
 
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_smvge")
+script = ExtResource("2_0m2yt")
 
 [node name="Label" type="Label" parent="." unique_id=1124249494]
 layout_mode = 1

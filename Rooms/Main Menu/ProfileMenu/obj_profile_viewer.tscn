@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dvjbxnc5fxgub" path="res://DragonXVI-Godot/MiscComps/focus_sort_box_container.gd" id="1_13w6s"]
 [ext_resource type="Theme" uid="uid://cnughvo6m8l6u" path="res://main_theme.tres" id="1_cbnui"]
+[ext_resource type="Script" uid="uid://dawusfm8iqxjk" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_viewer.gd" id="2_ihatb"]
 
-[node name="ObjProfileViewer" type="PanelContainer" unique_id=1599187644]
+[node name="ObjProfileViewer" type="PanelContainer" unique_id=1599187644 node_paths=PackedStringArray("_profile_panel_container")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -11,6 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_cbnui")
+script = ExtResource("2_ihatb")
+_profile_panel_container = NodePath("MarginContainer/FocusContainer")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1569281689]
 layout_mode = 2
