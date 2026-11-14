@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bsg863dtmu8pn"]
+
+[ext_resource type="Script" uid="uid://c5aoaf4pycb5y" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_maker.gd" id="1_essds"]
+[ext_resource type="Script" uid="uid://dvjbxnc5fxgub" path="res://DragonXVI-Godot/MiscComps/focus_sort_box_container.gd" id="2_v7w6v"]
+[ext_resource type="Script" uid="uid://cfwviaehv2rcp" path="res://MenuComps/gator_button.gd" id="3_jt8sa"]
+
+[node name="ObjProfileMaker" type="PanelContainer" unique_id=614340440 node_paths=PackedStringArray("_error_label", "_line_edit", "_submit_button")]
+focus_mode = 2
+script = ExtResource("1_essds")
+_error_label = NodePath("MarginContainer/BoxContainer/ErrorLabel")
+_line_edit = NodePath("MarginContainer/BoxContainer/FocusSortBoxContainer/LineEdit")
+_submit_button = NodePath("MarginContainer/BoxContainer/FocusSortBoxContainer/SubmitButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=788818551]
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer" unique_id=236360013]
+layout_mode = 2
+vertical = true
+
+[node name="ErrorLabel" type="Label" parent="MarginContainer/BoxContainer" unique_id=771575529]
+layout_mode = 2
+text = "EXAMPLE TEXT GRAAAHHHHH"
+horizontal_alignment = 1
+
+[node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/BoxContainer" unique_id=2141067054]
+layout_mode = 2
+alignment = 1
+script = ExtResource("2_v7w6v")
+metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
+
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer/FocusSortBoxContainer" unique_id=317115428]
+layout_mode = 2
+text = "Make a profile: "
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/BoxContainer/FocusSortBoxContainer" unique_id=1611380154]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Profile Name..."
+max_length = 16
+emoji_menu_enabled = false
+
+[node name="SubmitButton" type="Button" parent="MarginContainer/BoxContainer/FocusSortBoxContainer" unique_id=323252730]
+layout_mode = 2
+offset_transform_enabled = true
+text = "KEY_MAKE_PROFILE"
+script = ExtResource("3_jt8sa")
+metadata/_custom_type_script = "uid://cfwviaehv2rcp"

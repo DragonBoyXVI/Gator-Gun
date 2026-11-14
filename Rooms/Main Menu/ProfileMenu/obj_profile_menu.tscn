@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c1juhvfve46li"]
+
+[ext_resource type="Theme" uid="uid://cnughvo6m8l6u" path="res://main_theme.tres" id="1_smvge"]
+[ext_resource type="Script" uid="uid://dvjbxnc5fxgub" path="res://DragonXVI-Godot/MiscComps/focus_sort_box_container.gd" id="2_0m2yt"]
+[ext_resource type="PackedScene" uid="uid://bsg863dtmu8pn" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_maker.tscn" id="3_477cx"]
+
+[node name="ObjProfileMenu" type="Control" unique_id=1642512932]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_smvge")
+
+[node name="Label" type="Label" parent="." unique_id=1124249494]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03359375
+anchor_top = 0.49305555
+anchor_right = 0.2875
+anchor_bottom = 0.5861111
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Pick a profile!!"
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1693215916]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer" unique_id=2133847160]
+layout_mode = 2
+vertical = true
+
+[node name="PickerPanelContainer" type="PanelContainer" parent="MarginContainer/BoxContainer" unique_id=554409826]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxContainer/PickerPanelContainer" unique_id=1710920538]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/BoxContainer/PickerPanelContainer/MarginContainer" unique_id=624211095]
+layout_mode = 2
+
+[node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/BoxContainer/PickerPanelContainer/MarginContainer/ScrollContainer" unique_id=1451144527]
+layout_mode = 2
+vertical = true
+script = ExtResource("2_0m2yt")
+metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
+
+[node name="MakerPanelContainer" parent="MarginContainer/BoxContainer" unique_id=614340440 instance=ExtResource("3_477cx")]
+layout_mode = 2
