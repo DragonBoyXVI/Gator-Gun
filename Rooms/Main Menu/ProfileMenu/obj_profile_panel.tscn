@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://5sc5wvqlhxkd"]
+
+[ext_resource type="Script" uid="uid://bmrd8ve2j3pri" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_panel.gd" id="1_ekgxq"]
+[ext_resource type="Theme" uid="uid://cnughvo6m8l6u" path="res://main_theme.tres" id="1_q7ugy"]
+[ext_resource type="Script" uid="uid://dvjbxnc5fxgub" path="res://DragonXVI-Godot/MiscComps/focus_sort_box_container.gd" id="2_de0xd"]
+[ext_resource type="Script" uid="uid://cfwviaehv2rcp" path="res://MenuComps/gator_button.gd" id="4_7yapx"]
+
+[node name="ObjProfilePanel" type="PanelContainer" unique_id=405680460 node_paths=PackedStringArray("_name_label", "_last_played_label", "_completion_label", "_load_button", "_delete_button")]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.13472222
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+script = ExtResource("1_ekgxq")
+_name_label = NodePath("MarginContainer/FocusSortBoxContainer/NameLabel")
+_last_played_label = NodePath("MarginContainer/FocusSortBoxContainer/LastPlayedLabel")
+_completion_label = NodePath("MarginContainer/FocusSortBoxContainer/CompletionLabel")
+_load_button = NodePath("MarginContainer/FocusSortBoxContainer/FocusSortBoxContainer/LoadButton")
+_delete_button = NodePath("MarginContainer/FocusSortBoxContainer/FocusSortBoxContainer/DeleteButton")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=47108943]
+layout_mode = 2
+theme = ExtResource("1_q7ugy")
+
+[node name="FocusSortBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=899465527]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/FocusSortBoxContainer" unique_id=42332735]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Drac Pelt"
+
+[node name="LastPlayedLabel" type="Label" parent="MarginContainer/FocusSortBoxContainer" unique_id=1948728977]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "2005-02-16"
+
+[node name="CompletionLabel" type="Label" parent="MarginContainer/FocusSortBoxContainer" unique_id=2134060599]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "5.0%"
+
+[node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/FocusSortBoxContainer" unique_id=1930202597]
+layout_mode = 2
+size_flags_horizontal = 10
+alignment = 1
+vertical = true
+script = ExtResource("2_de0xd")
+sort_option_flags = 9
+metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
+
+[node name="LoadButton" type="Button" parent="MarginContainer/FocusSortBoxContainer/FocusSortBoxContainer" unique_id=1024315044]
+layout_mode = 2
+offset_transform_enabled = true
+text = "KEY_LOAD"
+script = ExtResource("4_7yapx")
+metadata/_custom_type_script = "uid://cfwviaehv2rcp"
+
+[node name="DeleteButton" type="Button" parent="MarginContainer/FocusSortBoxContainer/FocusSortBoxContainer" unique_id=1214421801]
+layout_mode = 2
+offset_transform_enabled = true
+text = "KEY_DELETE"
+script = ExtResource("4_7yapx")
+metadata/_custom_type_script = "uid://cfwviaehv2rcp"

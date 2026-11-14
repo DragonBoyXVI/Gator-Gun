@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://up5v0cvghngy"]
+
+[ext_resource type="Script" uid="uid://dvjbxnc5fxgub" path="res://DragonXVI-Godot/MiscComps/focus_sort_box_container.gd" id="1_13w6s"]
+[ext_resource type="Theme" uid="uid://cnughvo6m8l6u" path="res://main_theme.tres" id="1_cbnui"]
+
+[node name="ObjProfileViewer" type="PanelContainer" unique_id=1599187644]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_cbnui")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1569281689]
+layout_mode = 2
+
+[node name="FocusContainer" type="BoxContainer" parent="MarginContainer" unique_id=581569426]
+layout_mode = 2
+vertical = true
+script = ExtResource("1_13w6s")
+sort_option_flags = 9
+metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
+
+[node name="LegendContainer" type="HBoxContainer" parent="MarginContainer/FocusContainer" unique_id=819641443]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/FocusContainer/LegendContainer" unique_id=924672521]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "KEY_NAME"
+
+[node name="LastPlayedLabel" type="Label" parent="MarginContainer/FocusContainer/LegendContainer" unique_id=481909023]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "KEY_LAST_PLAYED"
+
+[node name="CompletionLabel" type="Label" parent="MarginContainer/FocusContainer/LegendContainer" unique_id=256497341]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "KEY_COMPLETION_PERCENT"
+
+[node name="SpaceTaker" type="Control" parent="MarginContainer/FocusContainer/LegendContainer" unique_id=28917145]
+layout_mode = 2
+size_flags_horizontal = 3

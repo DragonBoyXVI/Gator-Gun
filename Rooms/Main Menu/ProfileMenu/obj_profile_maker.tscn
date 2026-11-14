@@ -27,6 +27,7 @@ horizontal_alignment = 1
 layout_mode = 2
 alignment = 1
 script = ExtResource("2_v7w6v")
+sort_option_flags = 9
 metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
 
 [node name="Label" type="Label" parent="MarginContainer/BoxContainer/FocusSortBoxContainer" unique_id=317115428]

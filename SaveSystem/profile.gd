@@ -24,3 +24,8 @@ const PROFILES_DIR_PATH := "user://profiles/";
 @export_placeholder( "YYYY-MM-DD" ) var date_created: String = Time.get_date_string_from_system();
 ## Date the profile was last played on.
 @export_placeholder( "YYYY-MM-DD" ) var date_last_played: String = Time.get_date_string_from_system();
+
+
+## Returns a float from 0.0 to 1.0 based on how much content this profile has unlocked.
+func get_completion_percent() -> float:
+	return 0.0;
