@@ -26,12 +26,12 @@ layout_mode = 2
 
 [node name="NameLabel" type="Label" parent="MarginContainer/FocusContainer/LegendContainer" unique_id=924672521]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 6
 text = "KEY_NAME"
 
 [node name="LastPlayedLabel" type="Label" parent="MarginContainer/FocusContainer/LegendContainer" unique_id=481909023]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 6
 text = "KEY_LAST_PLAYED"
 
 [node name="CompletionLabel" type="Label" parent="MarginContainer/FocusContainer/LegendContainer" unique_id=256497341]

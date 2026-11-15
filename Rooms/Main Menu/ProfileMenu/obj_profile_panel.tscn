@@ -30,17 +30,17 @@ layout_mode = 2
 
 [node name="NameLabel" type="Label" parent="MarginContainer/FocusSortBoxContainer" unique_id=42332735]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 6
 text = "Drac Pelt"
 
 [node name="LastPlayedLabel" type="Label" parent="MarginContainer/FocusSortBoxContainer" unique_id=1948728977]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 6
 text = "2005-02-16"
 
 [node name="CompletionLabel" type="Label" parent="MarginContainer/FocusSortBoxContainer" unique_id=2134060599]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 6
 text = "5.0%"
 
 [node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/FocusSortBoxContainer" unique_id=1930202597]

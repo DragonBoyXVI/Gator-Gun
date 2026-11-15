@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d15ot5ik7fai5"]
+
+[ext_resource type="Script" uid="uid://523qck0n5bd4" path="res://Rooms/Main Menu/ProfileMenu/obj_delete_profile_panel.gd" id="1_8awls"]
+[ext_resource type="Script" uid="uid://dvjbxnc5fxgub" path="res://DragonXVI-Godot/MiscComps/focus_sort_box_container.gd" id="1_sx1ky"]
+[ext_resource type="Theme" uid="uid://cnughvo6m8l6u" path="res://main_theme.tres" id="1_y84m5"]
+[ext_resource type="Script" uid="uid://cfwviaehv2rcp" path="res://MenuComps/gator_button.gd" id="2_y84m5"]
+
+[node name="ObjDeleteProfilePanel" type="PanelContainer" unique_id=379773132 node_paths=PackedStringArray("_no_button", "_yes_button")]
+script = ExtResource("1_8awls")
+_no_button = NodePath("MarginContainer/VBoxContainer/FocusSortBoxContainer/NoButton")
+_yes_button = NodePath("MarginContainer/VBoxContainer/FocusSortBoxContainer/YesButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=324000584]
+layout_mode = 2
+theme = ExtResource("1_y84m5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=22609915]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1647163242]
+layout_mode = 2
+text = "KEY_CONFIRM_PROFILE_DELETE"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=210648561]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1810618751]
+layout_mode = 2
+text = "Drac Pelt"
+
+[node name="CompletionLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=280822266]
+layout_mode = 2
+text = "200.0%"
+
+[node name="LastPlayedDateLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=946524235]
+layout_mode = 2
+text = "2005-02-16"
+
+[node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/VBoxContainer" unique_id=469715585]
+layout_mode = 2
+alignment = 1
+script = ExtResource("1_sx1ky")
+metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
+
+[node name="NoButton" type="Button" parent="MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=1366403409]
+layout_mode = 2
+offset_transform_enabled = true
+text = "KEY_NO"
+script = ExtResource("2_y84m5")
+metadata/_custom_type_script = "uid://cfwviaehv2rcp"
+
+[node name="YesButton" type="Button" parent="MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=262567165]
+layout_mode = 2
+offset_transform_enabled = true
+text = "KEY_YES"
+script = ExtResource("2_y84m5")
+metadata/_custom_type_script = "uid://cfwviaehv2rcp"

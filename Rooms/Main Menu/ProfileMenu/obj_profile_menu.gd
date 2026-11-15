@@ -2,8 +2,11 @@
 extends Control;
 class_name ObjProfileMenu;
 
+
 @export var _profile_viewer: ObjProfileViewer;
 @export var _profile_maker: ObjProfileMaker;
+
+@export var _delete_profile_panel: Container;
 
 
 func _ready() -> void:
@@ -12,6 +15,10 @@ func _ready() -> void:
 		return;
 	
 	_profile_maker.created_profile.connect( _on_profile_maker_created_profile );
+	
+	_delete_profile_panel.hide();
+	
+	_profile_maker.grab_focus.call_deferred();
 
 
 func _on_profile_maker_created_profile( profile: Profile )-> void:
