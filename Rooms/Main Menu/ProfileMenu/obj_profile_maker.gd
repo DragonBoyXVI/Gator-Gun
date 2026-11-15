@@ -15,9 +15,12 @@ const ERR_TEXT_PROFILE_EXISTS = "KEY_PROFILE_ALREADY_EXISTS";
 static func get_valid_text( text: String ) -> String:
 	
 	var valid_text := "";
-	var regex := RegEx.create_from_string( "[A-Za-z0-9]" );
+	var regex := RegEx.create_from_string( "[A-Za-z0-9 ]" );
 	for valid_char: RegExMatch in regex.search_all( text ):
 		valid_text += valid_char.get_string();
+	
+	if ( valid_text[ 0 ] == " " ):
+		valid_text[ 0 ] = "";
 	
 	return valid_text;
 

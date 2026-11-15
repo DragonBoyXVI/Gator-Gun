@@ -13,17 +13,13 @@ grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_cbnui")
 script = ExtResource("2_ihatb")
-_profile_panel_container = NodePath("MarginContainer/FocusContainer")
+_profile_panel_container = NodePath("MarginContainer/FocusContainer/ScrollContainer/FocusSortBoxContainer")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1569281689]
 layout_mode = 2
 
-[node name="FocusContainer" type="BoxContainer" parent="MarginContainer" unique_id=581569426]
+[node name="FocusContainer" type="VBoxContainer" parent="MarginContainer" unique_id=312420605]
 layout_mode = 2
-vertical = true
-script = ExtResource("1_13w6s")
-sort_option_flags = 9
-metadata/_custom_type_script = "uid://dvjbxnc5fxgub"
 
 [node name="LegendContainer" type="HBoxContainer" parent="MarginContainer/FocusContainer" unique_id=819641443]
 layout_mode = 2
@@ -46,3 +42,15 @@ text = "KEY_COMPLETION_PERCENT"
 [node name="SpaceTaker" type="Control" parent="MarginContainer/FocusContainer/LegendContainer" unique_id=28917145]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/FocusContainer" unique_id=410790888]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/FocusContainer/ScrollContainer" unique_id=1405430995]
+layout_mode = 2
+size_flags_horizontal = 3
+vertical = true
+script = ExtResource("1_13w6s")
+sort_option_flags = 9
+metadata/_custom_type_script = "uid://dvjbxnc5fxgub"

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://up5v0cvghngy" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_viewer.tscn" id="2_smvge"]
 [ext_resource type="PackedScene" uid="uid://bsg863dtmu8pn" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_maker.tscn" id="3_477cx"]
 
-[node name="ObjProfileMenu" type="Control" unique_id=1642512932]
+[node name="ObjProfileMenu" type="Control" unique_id=1642512932 node_paths=PackedStringArray("_profile_viewer", "_profile_maker")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +14,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_smvge")
 script = ExtResource("2_0m2yt")
+_profile_viewer = NodePath("MarginContainer/BoxContainer/ProfileViewer")
+_profile_maker = NodePath("MarginContainer/BoxContainer/MakerPanelContainer")
 
 [node name="Label" type="Label" parent="." unique_id=1124249494]
 layout_mode = 1

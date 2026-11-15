@@ -29,3 +29,6 @@ const PROFILES_DIR_PATH := "user://profiles/";
 ## Returns a float from 0.0 to 1.0 based on how much content this profile has unlocked.
 func get_completion_percent() -> float:
 	return 0.0;
+
+func get_name_as_file() -> String:
+	return profile_name.replace( " ", "_" ) + ".json";

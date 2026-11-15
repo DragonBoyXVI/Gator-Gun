@@ -6,6 +6,20 @@ class_name ObjProfileMenu;
 @export var _profile_maker: ObjProfileMaker;
 
 
+func _ready() -> void:
+	
+	if ( Engine.is_editor_hint() ):
+		return;
+	
+	_profile_maker.created_profile.connect( _on_profile_maker_created_profile );
+
 
 func _on_profile_maker_created_profile( profile: Profile )-> void:
-	pass;
+	
+	if ( not DirAccess.dir_exists_absolute( Profile.PROFILES_DIR_PATH ) ):
+		DirAccess.make_dir_recursive_absolute( Profile.PROFILES_DIR_PATH );
+	var file := FileAccess.open( Profile.PROFILES_DIR_PATH + "/" + profile.get_name_as_file(), FileAccess.WRITE );
+	file.store_string( XVIFuncs.resource_to_json( profile ) );
+	file.close();
+	
+	_profile_viewer.refresh.call_deferred();
