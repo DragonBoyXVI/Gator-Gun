@@ -3,6 +3,9 @@ extends Control;
 class_name ObjProfileMenu;
 
 
+signal profile_loaded();
+
+
 @export var _profile_viewer: ObjProfileViewer;
 @export var _profile_maker: ObjProfileMaker;
 @export var _profile_deletor: ObjProfileDeletor;
