@@ -42,7 +42,7 @@ func _ready() -> void:
 	_error_label.hide();
 	_submit_button.disabled = true;
 	
-	focus_entered.connect( _line_edit.grab_focus, CONNECT_DEFERRED );
+	focus_entered.connect( _submit_button.grab_focus, CONNECT_DEFERRED );
 	
 	_line_edit.text_changed.connect( _on_line_edit_text_changed );
 	_submit_button.pressed.connect( _on_submit_button_pressed );

@@ -13,7 +13,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_cbnui")
 script = ExtResource("2_ihatb")
-_profile_panel_container = NodePath("MarginContainer/FocusContainer/ScrollContainer/FocusSortBoxContainer")
+_profile_panel_container = NodePath("MarginContainer/FocusContainer/ScrollContainer/MarginContainer/FocusSortBoxContainer")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1569281689]
 layout_mode = 2
@@ -46,8 +46,14 @@ size_flags_horizontal = 3
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/FocusContainer" unique_id=410790888]
 layout_mode = 2
 size_flags_vertical = 3
+follow_focus = true
 
-[node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/FocusContainer/ScrollContainer" unique_id=1405430995]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/FocusContainer/ScrollContainer" unique_id=938186965]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FocusSortBoxContainer" type="BoxContainer" parent="MarginContainer/FocusContainer/ScrollContainer/MarginContainer" unique_id=1405430995]
 layout_mode = 2
 size_flags_horizontal = 3
 vertical = true

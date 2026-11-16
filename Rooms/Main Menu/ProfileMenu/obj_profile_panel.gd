@@ -38,7 +38,7 @@ func set_profile( profile: Profile ):
 	
 	_name_label.text = profile.profile_name;
 	_last_played_label.text = profile.date_last_played;
-	_completion_label.text = "%.1f%%" % profile.get_completion_percent();
+	_completion_label.text = profile.get_completion_percent_as_text();
 
 func get_profile() -> Profile:
 	return _profile;

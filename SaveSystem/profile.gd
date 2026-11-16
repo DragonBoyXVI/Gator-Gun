@@ -30,5 +30,14 @@ const PROFILES_DIR_PATH := "user://profiles/";
 func get_completion_percent() -> float:
 	return 0.0;
 
+## Returns the completion percent as a label ready percentage.
+func get_completion_percent_as_text() -> String:
+	return "%.1f%%" % get_completion_percent();
+
+
 func get_name_as_file() -> String:
 	return profile_name.replace( " ", "_" ) + ".json";
+
+## Comes with a slash at the end.
+func get_name_as_dir() -> String:
+	return profile_name.replace( " ", "_" ) + "/";

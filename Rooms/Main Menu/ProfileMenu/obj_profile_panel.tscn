@@ -12,7 +12,6 @@ anchor_bottom = 0.13472222
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-focus_mode = 2
 script = ExtResource("1_ekgxq")
 _name_label = NodePath("MarginContainer/FocusSortBoxContainer/NameLabel")
 _last_played_label = NodePath("MarginContainer/FocusSortBoxContainer/LastPlayedLabel")

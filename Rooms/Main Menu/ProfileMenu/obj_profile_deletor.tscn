@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b7aypcl3u3gly"]
+
+[ext_resource type="Script" uid="uid://wu3g2lavcb8t" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_deletor.gd" id="1_4ripx"]
+[ext_resource type="PackedScene" uid="uid://7k2hrfgy3e2g" path="res://MenuComps/YesNoPanel/obj_yes_no_panel.tscn" id="1_5bmmn"]
+
+[node name="ObjProfileDeletor" type="Control" unique_id=1535295179 node_paths=PackedStringArray("_name_label", "_last_played_label", "_completion_label", "_yes_no_panel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ripx")
+_name_label = NodePath("CenterContainer/VBoxContainer/PanelContainer/HBoxContainer/NameLabel")
+_last_played_label = NodePath("CenterContainer/VBoxContainer/PanelContainer/HBoxContainer/LastPlayedLabel")
+_completion_label = NodePath("CenterContainer/VBoxContainer/PanelContainer/HBoxContainer/CompletionLabel")
+_yes_no_panel = NodePath("CenterContainer/VBoxContainer/ObjYesNoPanel")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=717797447]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49019608)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1791056665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=779601041]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/VBoxContainer" unique_id=1994042225]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer" unique_id=222969886]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="CenterContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=900988181]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Drac Pelt"
+
+[node name="LastPlayedLabel" type="Label" parent="CenterContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=564153866]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "2005-02-16"
+
+[node name="CompletionLabel" type="Label" parent="CenterContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=2027170563]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "200.0%"
+
+[node name="ObjYesNoPanel" parent="CenterContainer/VBoxContainer" unique_id=2132124139 instance=ExtResource("1_5bmmn")]
+layout_mode = 2
+focus_mode = 2
