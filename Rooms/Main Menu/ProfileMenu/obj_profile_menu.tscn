@@ -53,5 +53,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ObjProfileDeletor" parent="." unique_id=1535295179 instance=ExtResource("5_477cx")]
+visible = false
 layout_mode = 1
 focus_mode = 2

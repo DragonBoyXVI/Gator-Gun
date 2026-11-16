@@ -14,6 +14,7 @@ func _ready() -> void:
 		return;
 	
 	_profile_viewer.profile_delete_clicked.connect( _on_profile_viewer_profile_delete_clicked );
+	_profile_viewer.profile_load_clicked.connect( _on_profile_viewer_profile_load_clicked );
 	
 	_profile_maker.created_profile.connect( _on_profile_maker_created_profile );
 	_profile_maker.grab_focus.call_deferred();
@@ -33,6 +34,9 @@ func _on_profile_maker_created_profile( profile: Profile )-> void:
 	
 	_profile_viewer.refresh.call_deferred();
 
+
+func _on_profile_viewer_profile_load_clicked( _profile: Profile ) -> void:
+	pass;
 
 func _on_profile_viewer_profile_delete_clicked( profile: Profile ) -> void:
 	

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://djwn6plspgr8y"]
+
+[ext_resource type="PackedScene" uid="uid://dv11mwncpvjy4" path="res://Rooms/Main Menu/MainMenu/obj_main_menu.tscn" id="1_vcmh6"]
+[ext_resource type="PackedScene" uid="uid://c1juhvfve46li" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_menu.tscn" id="5_5er0g"]
+
+[node name="MainMenuRoom" type="Node2D" unique_id=647852551]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1626776529]
+
+[node name="ObjMainMenu" parent="CanvasLayer" unique_id=1237875784 instance=ExtResource("1_vcmh6")]
+
+[node name="ObjProfileMenu" parent="CanvasLayer" unique_id=1642512932 instance=ExtResource("5_5er0g")]
+visible = false
