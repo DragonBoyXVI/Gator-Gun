@@ -29,6 +29,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Gator Gun"
 
+[editor]
+
+run/main_run_args="--argument woah"
+
 [input]
 
 "Move Right"={

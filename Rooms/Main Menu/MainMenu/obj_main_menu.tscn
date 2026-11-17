@@ -2,10 +2,12 @@
 
 [ext_resource type="Theme" uid="uid://cnughvo6m8l6u" path="res://main_theme.tres" id="1_4a6gq"]
 [ext_resource type="Texture2D" uid="uid://ip32hjke7db6" path="res://XVI-Godot-Assets/Images/Script Icons/icons.png" id="2_m6adl"]
+[ext_resource type="Script" uid="uid://bjf0m7bv70tkn" path="res://Rooms/Main Menu/MainMenu/obj_main_menu.gd" id="2_r0o5l"]
 [ext_resource type="Script" uid="uid://dvjbxnc5fxgub" path="res://DragonXVI-Godot/MiscComps/focus_sort_box_container.gd" id="3_r0o5l"]
 [ext_resource type="Script" uid="uid://cfwviaehv2rcp" path="res://MenuComps/gator_button.gd" id="4_2rrwt"]
+[ext_resource type="PackedScene" uid="uid://7k2hrfgy3e2g" path="res://MenuComps/YesNoPanel/obj_yes_no_panel.tscn" id="6_r0o5l"]
 
-[node name="ObjMainMenu" type="Control" unique_id=1237875784]
+[node name="ObjMainMenu" type="Control" unique_id=1237875784 node_paths=PackedStringArray("_play_button", "_quit_button", "_quit_confirm_yes_no_panel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +15,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_4a6gq")
+script = ExtResource("2_r0o5l")
+_play_button = NodePath("MarginContainer/VBoxContainer/FocusSortBoxContainer/PlayButton")
+_quit_button = NodePath("MarginContainer/VBoxContainer/FocusSortBoxContainer/QuitButton")
+_quit_confirm_yes_no_panel = NodePath("CenterContainer/ObjYesNoPanel")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1255655331]
 layout_mode = 1
@@ -64,6 +70,7 @@ script = ExtResource("4_2rrwt")
 metadata/_custom_type_script = "uid://cfwviaehv2rcp"
 
 [node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer/FocusSortBoxContainer" unique_id=785209703]
+visible = false
 layout_mode = 2
 offset_transform_enabled = true
 text = "KEY_SETTINGS"
@@ -76,3 +83,15 @@ offset_transform_enabled = true
 text = "KEY_QUIT_DESKTOP"
 script = ExtResource("4_2rrwt")
 metadata/_custom_type_script = "uid://cfwviaehv2rcp"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1157515187]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ObjYesNoPanel" parent="CenterContainer" unique_id=2132124139 instance=ExtResource("6_r0o5l")]
+layout_mode = 2

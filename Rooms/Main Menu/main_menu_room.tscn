@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://djwn6plspgr8y"]
 
+[ext_resource type="Script" uid="uid://ba3fgaqn0xoyr" path="res://Rooms/Main Menu/main_menu_room.gd" id="1_ss0d8"]
 [ext_resource type="PackedScene" uid="uid://dv11mwncpvjy4" path="res://Rooms/Main Menu/MainMenu/obj_main_menu.tscn" id="1_vcmh6"]
 [ext_resource type="PackedScene" uid="uid://c1juhvfve46li" path="res://Rooms/Main Menu/ProfileMenu/obj_profile_menu.tscn" id="5_5er0g"]
 
-[node name="MainMenuRoom" type="Node2D" unique_id=647852551]
+[node name="MainMenuRoom" type="Node2D" unique_id=647852551 node_paths=PackedStringArray("_main_menu", "_profile_menu")]
+script = ExtResource("1_ss0d8")
+_main_menu = NodePath("CanvasLayer/ObjMainMenu")
+_profile_menu = NodePath("CanvasLayer/ObjProfileMenu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1626776529]
 
