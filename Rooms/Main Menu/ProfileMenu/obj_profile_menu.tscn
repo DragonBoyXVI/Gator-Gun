@@ -11,8 +11,13 @@
 action = &"Back"
 pressed = true
 
+[sub_resource type="InputEventKey" id="InputEventKey_wytia"]
+device = -1
+pressed = true
+keycode = 4194305
+
 [sub_resource type="Shortcut" id="Shortcut_ua5yu"]
-events = [SubResource("InputEventAction_l237t")]
+events = [SubResource("InputEventAction_l237t"), SubResource("InputEventKey_wytia")]
 
 [node name="ObjProfileMenu" type="Control" unique_id=1642512932 node_paths=PackedStringArray("_profile_viewer", "_profile_maker", "_profile_deletor", "_back_button")]
 layout_mode = 3

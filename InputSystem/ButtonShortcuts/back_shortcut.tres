@@ -1,0 +1,13 @@
+[gd_resource type="Shortcut" format=3 uid="uid://ht18ska2cg5l"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_l237t"]
+action = &"Back"
+pressed = true
+
+[sub_resource type="InputEventKey" id="InputEventKey_wytia"]
+device = -1
+pressed = true
+keycode = 4194305
+
+[resource]
+events = [SubResource("InputEventAction_l237t"), SubResource("InputEventKey_wytia")]
