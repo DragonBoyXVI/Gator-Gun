@@ -6,6 +6,7 @@ class_name ObjMainMenu;
 signal play_pressed();
 
 
+@export var _buttons_container: Control;
 @export var _play_button: Button;
 @export var _quit_button: Button;
 
@@ -34,11 +35,13 @@ func focus_menu() -> void:
 func _on_quit_button_pressed() -> void:
 	
 	release_focus();
+	XVIControlAnimation.close_window( _buttons_container );
 	await XVIControlAnimation.open_window( _quit_confirm_yes_no_panel ).finished;
 	_quit_confirm_yes_no_panel.grab_focus.call_deferred();
 
 func _on_quit_confirm_yes_no_panel_no_pressed() -> void:
 	
 	release_focus();
-	await XVIControlAnimation.close_window( _quit_confirm_yes_no_panel ).finished;
+	XVIControlAnimation.close_window( _quit_confirm_yes_no_panel );
+	await XVIControlAnimation.open_window( _buttons_container ).finished;
 	_play_button.grab_focus.call_deferred();

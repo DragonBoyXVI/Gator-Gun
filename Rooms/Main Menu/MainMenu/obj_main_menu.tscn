@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://cfwviaehv2rcp" path="res://MenuComps/gator_button.gd" id="4_2rrwt"]
 [ext_resource type="PackedScene" uid="uid://7k2hrfgy3e2g" path="res://MenuComps/YesNoPanel/obj_yes_no_panel.tscn" id="6_r0o5l"]
 
-[node name="ObjMainMenu" type="Control" unique_id=1237875784 node_paths=PackedStringArray("_play_button", "_quit_button", "_quit_confirm_yes_no_panel")]
+[node name="ObjMainMenu" type="Control" unique_id=1237875784 node_paths=PackedStringArray("_buttons_container", "_play_button", "_quit_button", "_quit_confirm_yes_no_panel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_4a6gq")
 script = ExtResource("2_r0o5l")
+_buttons_container = NodePath("MarginContainer")
 _play_button = NodePath("MarginContainer/VBoxContainer/FocusSortBoxContainer/PlayButton")
 _quit_button = NodePath("MarginContainer/VBoxContainer/FocusSortBoxContainer/QuitButton")
 _quit_confirm_yes_no_panel = NodePath("CenterContainer/ObjYesNoPanel")
