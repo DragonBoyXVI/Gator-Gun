@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Radio="*uid://dbvf8jgbgsx2j"
 SaveManager="*uid://bmweusppby68q"
 
 [display]

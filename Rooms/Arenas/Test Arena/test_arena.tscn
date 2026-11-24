@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://3odo1g5c5eo"]
+
+[ext_resource type="Script" uid="uid://b7wijyysdypl7" path="res://Rooms/Arenas/obj_arena.gd" id="1_tjfib"]
+[ext_resource type="Texture2D" uid="uid://b5ribwh1tf45n" path="res://XVI-Godot-Assets/Images/Characters/brick.png" id="2_rwrse"]
+[ext_resource type="PackedScene" uid="uid://bfnhjulblk67y" path="res://SoldierSystem/test_player.tscn" id="3_n1am0"]
+
+[node name="TestArena" type="Node2D" unique_id=1768659946]
+script = ExtResource("1_tjfib")
+metadata/_custom_type_script = "uid://b7wijyysdypl7"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=338486291]
+position = Vector2(640, 360)
+scale = Vector2(6, 6)
+texture = ExtResource("2_rwrse")
+
+[node name="TestPlayer" parent="." unique_id=388744757 instance=ExtResource("3_n1am0")]

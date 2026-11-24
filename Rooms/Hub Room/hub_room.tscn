@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://674353sdgirm"]
+
+[ext_resource type="Script" uid="uid://dec65h6ee82p8" path="res://DragonXVI-Godot/RoomManagment/obj_room.gd" id="1_u7keb"]
+
+[node name="HubRoom" type="Node2D" unique_id=1181341239]
+script = ExtResource("1_u7keb")
+metadata/_custom_type_script = "uid://dec65h6ee82p8"
