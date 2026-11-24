@@ -2,6 +2,17 @@
 extends Node;
 
 
+#region Sequence
+
+## Emitted when a node needs to be added to the game world root.[br]
+## [br]
+## sequence_node: [Node] - The node we add to the game world.
+signal add_sequence_requested( sequence_node: Node );
+func request_add_sequence( sequence_node: Node ) -> void:
+	add_sequence_requested.emit( sequence_node );
+
+#endregion Sequence
+
 #region Screen Fader
 
 ## Emitted when the screen hidden state changes. [br]
@@ -32,7 +43,12 @@ func request_screen_fader_show_screen() -> void:
 
 #region Room Manager
 
-#signal room_manager_changed_room( room: ObjRoom2D );
+## Emitted when the room manager changes to a new room. [br]
+## [br]
+## room: [ObjRoom2D] - The room we changed to.
+signal room_manager_changed_room( room: ObjRoom2D );
+func emit_room_manager_changed_room( room: ObjRoom2D ) -> void:
+	room_manager_changed_room.emit( room );
 
 ## Emitted when we want to change to a new room. [br]
 ## [br]

@@ -37,5 +37,7 @@ func _on_profile_menu_back_pressed() -> void:
 func _on_profile_menu_profile_loaded() -> void:
 	
 	XVIControlAnimation.close_window( _profile_menu );
-	Radio.request_screen_fader_hide_screen();
-	await Radio.screen_fader_state_updated;
+	
+	var seq := ChangeRoomSequence.new();
+	seq.target_room_path = "res://Rooms/Arenas/Test Arena/test_arena.tscn";
+	Radio.request_add_sequence( seq );
