@@ -1,10 +1,25 @@
 [gd_scene format=3 uid="uid://bm1lwhfxgiwoh"]
 
+[ext_resource type="Script" uid="uid://ceotwstk2a2ej" path="res://GameWorld/game_world.gd" id="1_amxtn"]
 [ext_resource type="Script" uid="uid://gvp5qxyvjbnf" path="res://DragonXVI-Godot/RoomManagment/room_manager.gd" id="1_h0d1l"]
+[ext_resource type="Script" uid="uid://cu7ah3h13cp0e" path="res://DragonXVI-Godot/ScreenFaderSystem/screen_fader_manager.gd" id="1_qmcug"]
 [ext_resource type="PackedScene" uid="uid://djwn6plspgr8y" path="res://Rooms/Main Menu/main_menu_room.tscn" id="2_p2je4"]
 [ext_resource type="Script" uid="uid://d3kesyqgaanbp" path="res://XVI-Godot-Assets/Scripts/fps_label.gd" id="3_p2je4"]
 
 [node name="GameWorld" type="Node2D" unique_id=74066610]
+script = ExtResource("1_amxtn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2095707948]
+
+[node name="ScreenFaderManager" type="Control" parent="CanvasLayer" unique_id=1160316780]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qmcug")
+metadata/_custom_type_script = "uid://cu7ah3h13cp0e"
 
 [node name="RoomManager2D" type="Node2D" parent="." unique_id=1856671898 node_paths=PackedStringArray("_current_room")]
 script = ExtResource("1_h0d1l")

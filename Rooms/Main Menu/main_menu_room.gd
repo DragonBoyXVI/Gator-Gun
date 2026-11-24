@@ -15,6 +15,7 @@ func _ready() -> void:
 	_main_menu.play_pressed.connect( _on_main_menu_play_pressed );
 	
 	_profile_menu.back_pressed.connect( _on_profile_menu_back_pressed );
+	_profile_menu.profile_loaded.connect( _on_profile_menu_profile_loaded );
 	
 	_main_menu.focus_menu();
 
@@ -32,3 +33,9 @@ func _on_profile_menu_back_pressed() -> void:
 	XVIControlAnimation.close_window( _profile_menu );
 	await XVIControlAnimation.open_window( _main_menu ).finished;
 	_main_menu.focus_menu();
+
+func _on_profile_menu_profile_loaded() -> void:
+	
+	XVIControlAnimation.close_window( _profile_menu );
+	Radio.request_screen_fader_hide_screen();
+	await Radio.screen_fader_state_updated;
