@@ -42,6 +42,8 @@ func _on_profile_maker_created_profile( profile: Profile )-> void:
 	file.store_string( XVIFuncs.resource_to_json( profile ) );
 	file.close();
 	
+	DirAccess.make_dir_recursive_absolute( Profile.PROFILES_DIR_PATH + "/" + profile.get_name_as_dir() );
+	
 	_profile_viewer.refresh.call_deferred();
 
 
