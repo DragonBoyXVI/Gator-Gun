@@ -11,6 +11,12 @@ script = ExtResource("1_amxtn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2095707948]
 
+[node name="FpsLabel" type="Label" parent="CanvasLayer" unique_id=1892054013]
+offset_right = 77.0
+offset_bottom = 23.0
+script = ExtResource("3_p2je4")
+metadata/_custom_type_script = "uid://d3kesyqgaanbp"
+
 [node name="ScreenFaderManager" type="Control" parent="CanvasLayer" unique_id=1160316780]
 layout_mode = 3
 anchors_preset = 15
@@ -28,9 +34,3 @@ _current_room = NodePath("MainMenuRoom")
 metadata/_custom_type_script = "uid://gvp5qxyvjbnf"
 
 [node name="MainMenuRoom" parent="RoomManager2D" unique_id=647852551 instance=ExtResource("2_p2je4")]
-
-[node name="FpsLabel" type="Label" parent="." unique_id=1892054013]
-offset_right = 40.0
-offset_bottom = 23.0
-script = ExtResource("3_p2je4")
-metadata/_custom_type_script = "uid://d3kesyqgaanbp"

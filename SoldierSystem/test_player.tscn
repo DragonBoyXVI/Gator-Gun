@@ -1,44 +1,35 @@
 [gd_scene format=3 uid="uid://bfnhjulblk67y"]
 
 [ext_resource type="Texture2D" uid="uid://d3d886ls60isl" path="res://icon.svg" id="1_e81u5"]
+[ext_resource type="Script" uid="uid://bxf15x3xsh2vk" path="res://SoldierSystem/soldier_character.gd" id="1_ikgk0"]
+[ext_resource type="Script" uid="uid://c1v720exdvjg1" path="res://DragonXVI-Godot/StateMachines/state_machine.gd" id="2_hpu0s"]
+[ext_resource type="Script" uid="uid://c7qryj8yhvw58" path="res://SoldierSystem/States/soldier_free.gd" id="3_412om"]
 [ext_resource type="Script" uid="uid://c8u0cdagfafwm" path="res://SoldierSystem/rotation_control.gd" id="3_d51t8"]
 [ext_resource type="Script" uid="uid://5crd5r4wd5af" path="res://DragonXVI-Godot/MiscComps/velocity_floating_2d.gd" id="3_sks17"]
 [ext_resource type="Script" uid="uid://dqj08jljx4rgj" path="res://InputSystem/Brains/player_brain.gd" id="4_sks17"]
-
-[sub_resource type="GDScript" id="GDScript_ua5yu"]
-script/source = "@tool
-extends SoldierCharacter;
-
-
-@export var _movement: VelocityFloating2D;
-@export var _rotation: RotationControl;
-
-@export var _brain: Brain;
-
-@onready var _model: Node2D = $Sprite2D;
-
-
-#TEST
-func _physics_process( delta: float ) -> void:
-	
-	_movement.accelerate_in_direction( delta, _brain.move_vector );
-	_movement.move_character_body( self );
-	
-	_rotation.rotate_to_direction( delta, _brain.look_vector.angle() );
-	_model.rotation = _rotation.get_current_rotation();
-	
-	pass;
-"
+[ext_resource type="Texture2D" uid="uid://d1tih0h8h2lhj" path="res://XVI-Godot-Assets/Images/Script Icons/state_machine_node.atlastex" id="8_hpu0s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ua5yu"]
 radius = 48.0
 
-[node name="TestPlayer" type="CharacterBody2D" unique_id=388744757 node_paths=PackedStringArray("_movement", "_rotation", "_brain")]
-script = SubResource("GDScript_ua5yu")
-_movement = NodePath("VelocityFloating2D")
-_rotation = NodePath("RotationControl")
-_brain = NodePath("PlayerBrain")
+[node name="TestPlayer" type="CharacterBody2D" unique_id=388744757]
+script = ExtResource("1_ikgk0")
 metadata/_custom_type_script = "uid://bxf15x3xsh2vk"
+
+[node name="StateMachine" type="Node" parent="." unique_id=975116033 node_paths=PackedStringArray("_initial_state")]
+script = ExtResource("2_hpu0s")
+_initial_state = NodePath("SoldierStateFree")
+metadata/_custom_type_script = "uid://c1v720exdvjg1"
+
+[node name="SoldierStateFree" type="Node" parent="StateMachine" unique_id=1500863486 node_paths=PackedStringArray("_brain", "_movement", "_rotation", "_model", "_camera_focus", "_soldier")]
+script = ExtResource("3_412om")
+_brain = NodePath("../../PlayerBrain")
+_movement = NodePath("../../VelocityFloating2D")
+_rotation = NodePath("../../RotationControl")
+_model = NodePath("../../Sprite2D")
+_camera_focus = NodePath("../../CameraFocus")
+_soldier = NodePath("../..")
+metadata/_custom_type_script = "uid://c7qryj8yhvw58"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1732917268]
 texture = ExtResource("1_e81u5")
@@ -58,3 +49,13 @@ metadata/_custom_type_script = "uid://5crd5r4wd5af"
 [node name="PlayerBrain" type="Node2D" parent="." unique_id=655679007]
 script = ExtResource("4_sks17")
 metadata/_custom_type_script = "uid://dqj08jljx4rgj"
+
+[node name="CameraFocus" type="Marker2D" parent="." unique_id=1546969992]
+rotation = 0.7853982
+
+[node name="Sprite2D" type="Sprite2D" parent="CameraFocus" unique_id=2053340425]
+texture = ExtResource("8_hpu0s")
+
+[node name="Camera2D" type="Camera2D" parent="CameraFocus" unique_id=266162274]
+physics_interpolation_mode = 2
+position_smoothing_enabled = true
